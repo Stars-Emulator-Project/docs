@@ -48,6 +48,19 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-ideal-image',
+      {
+        quality: 70, // Adjust image quality (default is 70)
+        max: 1030, // Maximum image width in pixels
+        min: 640, // Minimum image width in pixels
+        steps: 2, // Number of image size variants to generate
+        disableInDev: false, // Disable optimization in development mode
+      },
+    ]
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',

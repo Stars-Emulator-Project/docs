@@ -1,0 +1,19 @@
+---
+title: Software Architecture
+sidebar_position: 1
+---
+
+import Image from '@theme/IdealImage';
+
+# Software Architecture
+
+<Image img={require('@site/static/img/system-architecture.png')} />
+
+As we talked in the [introduction](/docs/), our goal is to create an Android Emulator with a super simple UI inspired by **PlayCover**.
+User only needs to download the .apk file, import it into the emulator and then start using it without any configuration else.
+The steps is represented in the diagram above:
+1. **User**: User import .apk file via the GUI.
+2. **System**: The GUI will send the .apk file to the actual **Android Guest System** under the hook.
+3. **Android Guest System**: The Android Guest System will run the .apk file to install the application then send back the notification to GUI.
+4. **GUI**: The GUI will show the notification to user either the installation successed or failed.
+5. **User**: User can start using the application, he/she will interact with the application via ADB.
