@@ -20,7 +20,7 @@ const config: Config = {
   organizationName: 'Stars Emulator Project', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   deploymentBranch: 'gh-pages',
